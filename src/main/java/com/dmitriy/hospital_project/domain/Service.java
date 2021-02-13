@@ -8,6 +8,7 @@ public class Service {
     private Long price;
     private Long percent_insurance;
     private Long time;
+    private Long hospital_id;
 
 
     public Service() {
@@ -20,14 +21,22 @@ public class Service {
         this.time = time;
     }
 
-    public Service(Long id, String name, Long price, Long percent_insurance, Long time) {
+    public Service(String name, Long price, Long percent_insurance, Long time, Long hospital_id) {
+        this.name = name;
+        this.price = price;
+        this.percent_insurance = percent_insurance;
+        this.time = time;
+        this.hospital_id = hospital_id;
+    }
+
+    public Service(Long id, String name, Long price, Long percent_insurance, Long time, Long hospital_id) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.percent_insurance = percent_insurance;
         this.time = time;
+        this.hospital_id = hospital_id;
     }
-
 
     public Long getId() {
         return id;
@@ -69,6 +78,13 @@ public class Service {
         this.time = time;
     }
 
+    public Long getHospital_id() {
+        return hospital_id;
+    }
+
+    public void setHospital_id(Long hospital_id) {
+        this.hospital_id = hospital_id;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -79,12 +95,13 @@ public class Service {
                 Objects.equals(name, service.name) &&
                 Objects.equals(price, service.price) &&
                 Objects.equals(percent_insurance, service.percent_insurance) &&
-                Objects.equals(time, service.time);
+                Objects.equals(time, service.time) &&
+                Objects.equals(hospital_id, service.hospital_id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, price, percent_insurance, time);
+        return Objects.hash(id, name, price, percent_insurance, time, hospital_id);
     }
 
     @Override
@@ -95,6 +112,7 @@ public class Service {
                 ", price=" + price +
                 ", percent_insurance=" + percent_insurance +
                 ", time=" + time +
+                ", hospital_id=" + hospital_id +
                 '}';
     }
 }

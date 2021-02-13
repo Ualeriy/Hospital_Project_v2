@@ -9,29 +9,29 @@ public class Hospital {
     private String phone;
     private String type;
     private Boolean use_of_insurance;
-    private Long number_of_doctor;
+    private Long number_of_doctors;
 
 
     public Hospital() {
     }
 
-    public Hospital(String name, String address, String phone, String type, Boolean use_of_insurance, Long number_of_doctor) {
+    public Hospital(String name, String address, String phone, String type, Boolean use_of_insurance, Long number_of_doctors) {
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.type = type;
         this.use_of_insurance = use_of_insurance;
-        this.number_of_doctor = number_of_doctor;
+        this.number_of_doctors = number_of_doctors;
     }
 
-    public Hospital(Long id, String name, String address, String phone, String type, Boolean use_of_insurance, Long number_of_doctor) {
+    public Hospital(Long id, String name, String address, String phone, String type, Boolean use_of_insurance, Long number_of_doctors) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.type = type;
         this.use_of_insurance = use_of_insurance;
-        this.number_of_doctor = number_of_doctor;
+        this.number_of_doctors = number_of_doctors;
     }
 
     public Long getId() {
@@ -82,12 +82,12 @@ public class Hospital {
         this.use_of_insurance = use_of_insurance;
     }
 
-    public Long getNumber_of_doctor() {
-        return number_of_doctor;
+    public Long getNumber_of_doctors() {
+        return number_of_doctors;
     }
 
-    public void setNumber_of_doctor(Long number_of_doctor) {
-        this.number_of_doctor = number_of_doctor;
+    public void setNumber_of_doctors(Long number_of_doctors) {
+        this.number_of_doctors = number_of_doctors;
     }
 
 
@@ -102,12 +102,12 @@ public class Hospital {
                 Objects.equals(phone, hospital.phone) &&
                 Objects.equals(type, hospital.type) &&
                 Objects.equals(use_of_insurance, hospital.use_of_insurance) &&
-                Objects.equals(number_of_doctor, hospital.number_of_doctor);
+                Objects.equals(number_of_doctors, hospital.number_of_doctors);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, address, phone, type, use_of_insurance, number_of_doctor);
+        return Objects.hash(id, name, address, phone, type, use_of_insurance, number_of_doctors);
     }
 
     @Override
@@ -119,7 +119,7 @@ public class Hospital {
                 ", phone='" + phone + '\'' +
                 ", type='" + type + '\'' +
                 ", use_of_insurance=" + use_of_insurance +
-                ", number_of_doctor=" + number_of_doctor +
+                ", number_of_doctor=" + number_of_doctors +
                 '}';
     }
 }
